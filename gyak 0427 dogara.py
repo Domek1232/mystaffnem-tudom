@@ -15,9 +15,7 @@ class Buszjarat:
 #fájl megynyitása olvasásra
 
 file = open('eladott.txt', 'r',encoding='utf-8')
-
 file.readline()
-
 #objektumlista deklarálása
 busz: list[Buszjarat] = []
 
