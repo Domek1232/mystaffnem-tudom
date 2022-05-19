@@ -7,7 +7,7 @@ lista = []
 # első sor beolvasása (fejléc, nem csinálunk vele semmit)
 file.readline()
 
-#fájl sirainak bejárása 
+#fájl sorainak bejárása 
 
 for sor in file:
      #listához hozzáfűzöm
@@ -17,8 +17,8 @@ print(lista)
 #1. Feladat Van-e Zsolt keresztnevű induló 
 print("--- 1. Feladat: ---")
 vane = False
-for i in lista:
-    if 'Zsolt':
+for k in range(len(lista)):
+    if 'Zsolt' in lista[k][0]: 
         vane = True
 
 if vane == True:
