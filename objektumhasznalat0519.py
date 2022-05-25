@@ -19,6 +19,13 @@ class Haromszog:
             return "Háromszöget alkotnak"
         else:
             return "Nem alkotnak háromszöget."
+    
+    def vaneo(self,keresett):
+        return self.a == int(keresett) or self.b == int(keresett) or self.c == int(keresett)
+        
+    def derekszogue(self)-> bool:
+        return self.a*self.a + self.b*self.b == self.c*self.c
+        
     # osztály metódusa: egész számként visszaadja a háromszög kerületét
     def kerulet(self)-> int            :
         return self.a + self.b + self.c
@@ -57,4 +64,17 @@ for it in lista:
 #A kerulet() metódus segítségével írasd ki az egyes háromszögek kerületét.
     print("A háromszög kerülete:" ,egyHaromszog.kerulet())
 
+#1. Feladat Kérj be a felhasználótól 3 számot (megfelelő adatszerkezetben), majd írd ki neki,hogy háromszöget alkotnak-e!
+#EGYIK MEGOLDÁS
+bekertSzamok = []
+for i in range(3):
+    szam: int = int(input("Add meg a háromszög oldalát:"))
+    bekertSzamok.append(szam)
+    
+egyHaromszog = Haromszog(bekertSzamok)
+print(egyHaromszog.haromszoge())
 
+#3. Feladat Írj egy új osztály metódust,amelyik logikai értékként megadja, hogy szerepel-e benne 
+# egy paraméterént megadott szám (ezt a felhasználótól kérd be)!
+keresett: int = int(input("Add meg a keresett számot:"))
+print(egyHaromszog.vaneo(keresett))
