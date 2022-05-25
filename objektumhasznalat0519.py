@@ -12,16 +12,18 @@ class Haromszog:
         self.a = int(sorom[0])
         self.b = int(sorom[1])
         self.c = int(sorom[2])    
+        
     # osztály metódusa: szöveggel visszatérve megmondja, hogy a számok háromszöget alkotnak-e    
     def haromszoge(self) -> str:
-        if self.a<self.b+self.c and self.b<self.a+self.c and self.c<self.a+self.b:
+        if self.a < self.b+self.c and self.b < self.a+self.c and self.c < self.a + self.b:
             return "Háromszöget alkotnak"
         else:
             return "Nem alkotnak háromszöget."
-    
     # osztály metódusa: egész számként visszaadja a háromszög kerületét
     def kerulet(self)-> int            :
         return self.a + self.b + self.c
+    def t():
+            pass
 
 #Majd hozz létre egy file változót, amiben a haromszogek.txt állományt nyitod meg olvasásra. 
 #Az állomány soraiban egy-egy háromszög 3 oldalának lehetséges hossza található. 
@@ -44,12 +46,15 @@ for sor in file:
 print(lista) 
 
 #A lista minden eleméből példányosíts egy egyHaromszog nevű, Haromszog típusú objektumot.
-for item in lista:
-    print(item)
-    EgyHaromszog = Haromszog(item)
+for it in lista:
+    print(it)
+    egyHaromszog = Haromszog(it)  
     
 #Az osztálynak már vannak kész metódusai. 
 #A haromszoge() metódus segítségével írasd ki listasoronként, hogy háromszöget alkotnak-e a számok.
-for u in lista:
-    if haromszoge(u):
-        print(u)
+    print(egyHaromszog.haromszoge())
+    
+#A kerulet() metódus segítségével írasd ki az egyes háromszögek kerületét.
+    print("A háromszög kerülete:" ,egyHaromszog.kerulet())
+
+
